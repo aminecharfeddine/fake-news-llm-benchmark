@@ -12,6 +12,13 @@ from fakenews.data import clean_text, clean_title, load_raw, prepare, split
     ("Read more at https://example.com/story now", "Read more at now"),
     ("As @realDonaldTrump wrote pic.twitter.com/abc123", "As wrote"),
     ("A 21st Century Wire report.", "A report."),
+    ("Talks stalled.READ MORE SYRIA NEWS AT: SYRIA FilesSUPPORT OUR WORK BY SUBSCRIBING", "Talks stalled."),
+    ("He resigned. Continue this story at Newsweek and more", "He resigned."),
+    ("He spoke. Via: Zero Hedge", "He spoke."),
+    ("He spoke. h/t The Hill", "He spoke."),
+    ("He was elected via a rigged system.", "He was elected via a rigged system."),
+    ("Read more about the bill below.", "Read more about the bill below."),
+    ("He left. Read more: Daily Caller The mantra", "He left. The mantra"),
 ])
 def test_clean_text_removes_source_artifacts(raw, expected):
     assert clean_text(raw) == expected

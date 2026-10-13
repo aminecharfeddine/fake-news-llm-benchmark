@@ -31,6 +31,11 @@ _IMAGE_CREDIT = re.compile(
     r"(featured\s+image|photo|image|screenshot|screen\s+capture)\s+(via|by|credit|courtesy\s+of)\b[^\n]*$",
     re.IGNORECASE,
 )
+# Site footers and attribution lines, e.g. "READ MORE SYRIA NEWS AT: SYRIA Files SUPPORT OUR WORK BY
+# SUBSCRIBING ...", "Continue this story at Newsweek", "Via: Zero Hedge", "h/t The Hill"
+_FOOTER = re.compile(r"(read\s+more\b[^.!?]{0,80}?\bat\s*:|support\s+(our\s+work|subscribe)|subscribe\s+now|"
+                     r"become\s+a\s+member|continue\s+this\s+(story|report)\s+at).*$", re.IGNORECASE | re.DOTALL)
+_VIA_CREDIT = re.compile(r"(\b(via|hat\s+tip|read\s+more)\s*:|\bread\s+more\s+from\b|\bh/t\b:?)\s*\S+(\s+\S+)?", re.IGNORECASE)
 _SOURCE_NAMES = re.compile(r"\b(21st\s+century\s+wire|21wire|getty\s+images|shutterstock)\b", re.IGNORECASE)
 _URL = re.compile(r"(https?://\S+|www\.\S+|\b\S+\.(com|org|net|co)/\S*)", re.IGNORECASE)
 _HANDLE = re.compile(r"@\w+")
@@ -49,6 +54,8 @@ def clean_text(text: str) -> str:
     if not isinstance(text, str):
         return ""
     t = _DATELINE.sub("", text)
+    t = _FOOTER.sub(" ", t)
+    t = _VIA_CREDIT.sub(" ", t)
     t = _PIC_TWITTER.sub(" ", t)
     t = _URL.sub(" ", t)
     t = _HANDLE.sub(" ", t)

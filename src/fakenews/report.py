@@ -99,9 +99,9 @@ def main() -> None:
 
     parts = ["# Results\n"]
     if full:
-        parts += [f"## Full test set ({n_test:,} articles)\n", table(full), ""]
+        parts += [f"### Full test set ({n_test:,} articles)\n", table(full), ""]
     if h2h:
-        parts += [f"## Head-to-head on the LLM subsample ({len(common):,} articles, same rows for every model)\n",
+        parts += [f"### Head-to-head on the LLM subsample ({len(common):,} articles, same rows for every model)\n",
                   table(h2h), "", "![Quality vs cost](cost_vs_f1.png)", ""]
         plot_cost_vs_f1(h2h, RESULTS_DIR / "cost_vs_f1.png")
     plot_confusions({k: p for k, p in (h2h_preds or preds).items() if len(p)}, RESULTS_DIR / "confusion_matrices.png")

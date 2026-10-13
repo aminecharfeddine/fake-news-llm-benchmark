@@ -1,0 +1,21 @@
+{
+  "full_test": {
+    "tfidf_logreg": {
+      "n": 5621,
+      "accuracy": 0.9873687955879736,
+      "precision_fake": 0.9911326078194277,
+      "recall_fake": 0.9804625199362041,
+      "f1_fake": 0.9857686911204651,
+      "f1_macro": 0.9872070706521884,
+      "false_positive_rate": 0.007067137809187279,
+      "tp": 2459,
+      "fp": 22,
+      "tn": 3091,
+      "fn": 49,
+      "roc_auc": 0.9987955023206176,
+      "latency_ms_per_article": 0.8301728541184953,
+      "cost_per_1k_usd": 0.0
+    }
+  },
+  "head_to_head": {}
+}

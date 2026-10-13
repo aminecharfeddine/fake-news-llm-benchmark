@@ -1,0 +1,587 @@
+{
+  "subject_only_accuracy": 1.0,
+  "raw": {
+    "n_articles": 37554,
+    "metrics": {
+      "n": 5634,
+      "accuracy": 0.9905928292509762,
+      "precision_fake": 0.9935871743486974,
+      "recall_fake": 0.9852941176470589,
+      "f1_fake": 0.9894232688086211,
+      "f1_macro": 0.9904763778916048,
+      "false_positive_rate": 0.005131494547787043,
+      "tp": 2479,
+      "fp": 16,
+      "tn": 3102,
+      "fn": 37
+    },
+    "top_features": {
+      "fake": [
+        [
+          "via",
+          13.199
+        ],
+        [
+          "video",
+          10.951
+        ],
+        [
+          "read more",
+          7.774
+        ],
+        [
+          "image",
+          7.574
+        ],
+        [
+          "featured",
+          7.28
+        ],
+        [
+          "featured image",
+          7.255
+        ],
+        [
+          "just",
+          7.196
+        ],
+        [
+          "this",
+          6.873
+        ],
+        [
+          "read",
+          6.811
+        ],
+        [
+          "us",
+          6.627
+        ],
+        [
+          "image via",
+          6.527
+        ],
+        [
+          "gop",
+          6.378
+        ],
+        [
+          "obama",
+          6.244
+        ],
+        [
+          "watch",
+          6.152
+        ],
+        [
+          "president trump",
+          6.125
+        ]
+      ],
+      "real": [
+        [
+          "reuters",
+          -23.804
+        ],
+        [
+          "said",
+          -14.867
+        ],
+        [
+          "washington reuters",
+          -10.837
+        ],
+        [
+          "said on",
+          -10.403
+        ],
+        [
+          "on wednesday",
+          -7.21
+        ],
+        [
+          "washington",
+          -7.037
+        ],
+        [
+          "reuters the",
+          -6.903
+        ],
+        [
+          "on tuesday",
+          -6.729
+        ],
+        [
+          "said in",
+          -6.685
+        ],
+        [
+          "president donald",
+          -6.476
+        ],
+        [
+          "on thursday",
+          -6.468
+        ],
+        [
+          "on friday",
+          -6.088
+        ],
+        [
+          "said the",
+          -5.961
+        ],
+        [
+          "on monday",
+          -5.773
+        ],
+        [
+          "he said",
+          -5.724
+        ]
+      ]
+    },
+    "test_period": [
+      "2015-04-04",
+      "2018-02-18"
+    ]
+  },
+  "clean": {
+    "n_articles": 37467,
+    "metrics": {
+      "n": 5621,
+      "accuracy": 0.9850560398505604,
+      "precision_fake": 0.9914841849148418,
+      "recall_fake": 0.9748803827751196,
+      "f1_fake": 0.9831121833534379,
+      "f1_macro": 0.9848553896984165,
+      "false_positive_rate": 0.006745904272406039,
+      "tp": 2445,
+      "fp": 21,
+      "tn": 3092,
+      "fn": 63
+    },
+    "top_features": {
+      "fake": [
+        [
+          "just",
+          9.055
+        ],
+        [
+          "this",
+          8.25
+        ],
+        [
+          "gop",
+          8.139
+        ],
+        [
+          "us",
+          8.085
+        ],
+        [
+          "president trump",
+          7.995
+        ],
+        [
+          "the us",
+          7.553
+        ],
+        [
+          "watch",
+          6.515
+        ],
+        [
+          "obama",
+          6.399
+        ],
+        [
+          "you",
+          6.337
+        ],
+        [
+          "here",
+          6.087
+        ],
+        [
+          "is",
+          6.053
+        ],
+        [
+          "even",
+          6.021
+        ],
+        [
+          "hillary",
+          5.896
+        ],
+        [
+          "president obama",
+          5.751
+        ],
+        [
+          "america",
+          5.594
+        ]
+      ],
+      "real": [
+        [
+          "said",
+          -18.065
+        ],
+        [
+          "said on",
+          -12.923
+        ],
+        [
+          "on wednesday",
+          -8.772
+        ],
+        [
+          "president donald",
+          -8.547
+        ],
+        [
+          "on tuesday",
+          -8.242
+        ],
+        [
+          "said in",
+          -8.19
+        ],
+        [
+          "on thursday",
+          -7.952
+        ],
+        [
+          "on friday",
+          -7.361
+        ],
+        [
+          "on monday",
+          -7.331
+        ],
+        [
+          "said the",
+          -6.958
+        ],
+        [
+          "he said",
+          -6.593
+        ],
+        [
+          "wednesday",
+          -6.43
+        ],
+        [
+          "republican",
+          -6.197
+        ],
+        [
+          "tuesday",
+          -5.929
+        ],
+        [
+          "thursday",
+          -5.854
+        ]
+      ]
+    },
+    "test_period": [
+      "2015-03-31",
+      "2018-02-18"
+    ]
+  },
+  "clean_style_masked": {
+    "n_articles": 37467,
+    "metrics": {
+      "n": 5621,
+      "accuracy": 0.9813200498132005,
+      "precision_fake": 0.9878197320341048,
+      "recall_fake": 0.9700956937799043,
+      "f1_fake": 0.9788774894387448,
+      "f1_macro": 0.9810668742043029,
+      "false_positive_rate": 0.009637006103437198,
+      "tp": 2433,
+      "fp": 30,
+      "tn": 3083,
+      "fn": 75
+    },
+    "top_features": {
+      "fake": [
+        [
+          "just",
+          9.073
+        ],
+        [
+          "this",
+          8.442
+        ],
+        [
+          "president trump",
+          8.035
+        ],
+        [
+          "gop",
+          7.941
+        ],
+        [
+          "us",
+          7.718
+        ],
+        [
+          "the us",
+          7.237
+        ],
+        [
+          "you",
+          6.793
+        ],
+        [
+          "watch",
+          6.519
+        ],
+        [
+          "obama",
+          6.387
+        ],
+        [
+          "is",
+          6.229
+        ],
+        [
+          "hillary",
+          6.227
+        ],
+        [
+          "here",
+          6.203
+        ],
+        [
+          "even",
+          6.06
+        ],
+        [
+          "president obama",
+          5.586
+        ],
+        [
+          "mr",
+          5.518
+        ]
+      ],
+      "real": [
+        [
+          "said",
+          -18.267
+        ],
+        [
+          "said on",
+          -13.512
+        ],
+        [
+          "president donald",
+          -8.712
+        ],
+        [
+          "said in",
+          -8.15
+        ],
+        [
+          "said the",
+          -6.457
+        ],
+        [
+          "he said",
+          -6.087
+        ],
+        [
+          "republican",
+          -5.934
+        ],
+        [
+          "nov",
+          -5.377
+        ],
+        [
+          "minister",
+          -5.14
+        ],
+        [
+          "on that",
+          -5.121
+        ],
+        [
+          "told",
+          -4.974
+        ],
+        [
+          "spokesman",
+          -4.779
+        ],
+        [
+          "president barack",
+          -4.643
+        ],
+        [
+          "in statement",
+          -4.54
+        ],
+        [
+          "reporters",
+          -4.451
+        ]
+      ]
+    },
+    "test_period": [
+      "2015-03-31",
+      "2018-02-18"
+    ]
+  },
+  "clean_temporal": {
+    "n_articles": 37467,
+    "metrics": {
+      "n": 5621,
+      "accuracy": 0.9822095712506671,
+      "precision_fake": 0.8826739427012278,
+      "recall_fake": 0.9788199697428139,
+      "f1_fake": 0.9282639885222381,
+      "f1_macro": 0.9590548212310621,
+      "false_positive_rate": 0.017338709677419354,
+      "tp": 647,
+      "fp": 86,
+      "tn": 4874,
+      "fn": 14
+    },
+    "top_features": {
+      "fake": [
+        [
+          "gop",
+          8.599
+        ],
+        [
+          "just",
+          8.38
+        ],
+        [
+          "this",
+          8.245
+        ],
+        [
+          "us",
+          7.507
+        ],
+        [
+          "the us",
+          6.546
+        ],
+        [
+          "president trump",
+          6.495
+        ],
+        [
+          "president obama",
+          6.316
+        ],
+        [
+          "is",
+          6.313
+        ],
+        [
+          "watch",
+          5.957
+        ],
+        [
+          "you",
+          5.954
+        ],
+        [
+          "even",
+          5.777
+        ],
+        [
+          "here",
+          5.534
+        ],
+        [
+          "hillary",
+          5.439
+        ],
+        [
+          "sen",
+          5.429
+        ],
+        [
+          "mr",
+          5.247
+        ]
+      ],
+      "real": [
+        [
+          "said",
+          -18.652
+        ],
+        [
+          "said on",
+          -13.857
+        ],
+        [
+          "president donald",
+          -9.568
+        ],
+        [
+          "on wednesday",
+          -9.527
+        ],
+        [
+          "on tuesday",
+          -9.082
+        ],
+        [
+          "said in",
+          -8.779
+        ],
+        [
+          "on thursday",
+          -8.49
+        ],
+        [
+          "on friday",
+          -8.171
+        ],
+        [
+          "republican",
+          -7.299
+        ],
+        [
+          "on monday",
+          -7.192
+        ],
+        [
+          "said the",
+          -6.812
+        ],
+        [
+          "wednesday",
+          -6.734
+        ],
+        [
+          "he said",
+          -6.652
+        ],
+        [
+          "tuesday",
+          -6.41
+        ],
+        [
+          "thursday",
+          -5.803
+        ]
+      ]
+    },
+    "test_period": [
+      "2017-11-04",
+      "2018-02-19"
+    ]
+  }
+}

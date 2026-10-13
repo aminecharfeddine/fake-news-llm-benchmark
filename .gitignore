@@ -1,0 +1,15 @@
+# Data and model artifacts (re-created by the pipeline)
+data/raw/*
+!data/raw/README.md
+/data/processed/
+/models/
+results/llm_cache/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+.env

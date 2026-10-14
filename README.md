@@ -81,7 +81,7 @@ make audit         # leakage audit  -> results/leakage_audit.md
 
 # 2. Models
 make baseline      # TF-IDF + LogReg, C tuned on validation
-make transformer   # DistilBERT; use a GPU (notebooks/train_transformer_colab.ipynb runs it on Colab)
+make transformer   # DistilBERT; use a GPU (see notebooks/train_transformer_colab.ipynb)
 make llm MODEL=<openai-model> PRICE_IN=<$ per 1M input tokens> PRICE_OUT=<$ per 1M output tokens> SHOTS=0
 
 # 3. Compare

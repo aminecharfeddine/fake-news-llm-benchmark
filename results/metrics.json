@@ -1,5 +1,21 @@
 {
   "full_test": {
+    "distilbert_finetuned": {
+      "n": 5621,
+      "accuracy": 0.9982209571250668,
+      "precision_fake": 0.9992006394884093,
+      "recall_fake": 0.9968102073365231,
+      "f1_fake": 0.998003992015968,
+      "f1_macro": 0.9981996853532985,
+      "false_positive_rate": 0.00064246707356248,
+      "tp": 2500,
+      "fp": 2,
+      "tn": 3111,
+      "fn": 8,
+      "roc_auc": 0.9999833491388431,
+      "latency_ms_per_article": 8.141611028108867,
+      "cost_per_1k_usd": 0.0
+    },
     "tfidf_logreg": {
       "n": 5621,
       "accuracy": 0.9873687955879736,

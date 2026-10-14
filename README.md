@@ -48,13 +48,20 @@ See [results/leakage_audit.md](results/leakage_audit.md) for the top n-grams in 
 
 | Model | n | Accuracy | F1 (fake) | Recall (fake) | FPR | Latency (ms/article) | Cost / 1k articles |
 |---|---:|---:|---:|---:|---:|---:|---:|
+| DistilBERT (fine-tuned) | 5,621 | 99.82% | 0.9980 | 99.68% | 0.06% | 8.14 | $0.00 |
 | TF-IDF + LogReg | 5,621 | 98.74% | 0.9858 | 98.05% | 0.71% | 0.83 | $0.00 |
 
 ![Confusion matrices](results/confusion_matrices.png)
 
-> DistilBERT and LLM results are added by running `make transformer` (GPU) and `make llm`; the head-to-head table and the quality-vs-cost chart appear automatically once LLM predictions exist.
+Latency is measured in batch: TF-IDF on CPU, DistilBERT on a Colab T4 GPU (batch of 32, 256 tokens). DistilBERT was fine-tuned for 2 epochs (best validation macro-F1 0.9986 after epoch 1).
 
-**Error analysis (baseline).** The 22 false positives (real articles flagged as fake) are mostly full transcripts quoted by Reuters (Romney's speech on Trump, Comey's prepared testimony) and first-person feature stories: the voice is the speaker's, not the wire reporter's. Many of the 49 false negatives are fake-site articles that paste or paraphrase wire copy ("The agency said Thursday…"). Both confirm the model reads *writing style*, not truthfulness.
+> LLM results are added by running `make llm`; the head-to-head table and the quality-vs-cost chart then appear automatically.
+
+**DistilBERT cuts errors by 7x** (10 vs 71), and almost never flags a real article as fake (2 of 3,113). The two models fail on different articles: only 1 article fools both.
+
+**Error analysis.** The baseline's 22 false positives are mostly full transcripts quoted by Reuters (Romney's speech on Trump, Comey's prepared testimony) and first-person feature stories: the voice is the speaker's, not the wire reporter's. Many of its 49 false negatives are fake-site articles that paste or paraphrase wire copy ("The agency said Thursday…").
+
+DistilBERT's 10 errors are more telling. Several "fake" articles it calls real are factually accurate, like a report on record temperatures in India: they are labeled fake because of the site that published them, not because of what they say. One of its two false positives is a Reuters "Story Withdrawn" notice, whose label is debatable. **On this dataset, the remaining errors are as much label noise as model mistakes.** Both models learn *which kind of outlet wrote this*, and a 99.8% score says little about detecting false claims.
 <!-- /RESULTS:MAIN -->
 
 All models are scored on the same cleaned test set. The LLM is evaluated on a stratified subsample to keep API costs low, and every other model is re-scored on exactly those articles for the head-to-head table. "Fake" is the positive class; FPR is the share of real articles wrongly flagged as fake.
